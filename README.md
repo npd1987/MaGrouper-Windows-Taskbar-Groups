@@ -13,7 +13,7 @@
   <img alt="Downloads" src="https://img.shields.io/github/downloads/npd1987/MaGrouper-Windows-Taskbar-Groups/total?label=downloads&color=1a7f37">
   <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%2011-0e7490">
   <img alt="Nothing else to install" src="https://img.shields.io/badge/nothing%20else%20to%20install-8250df">
-  <img alt="Licence" src="https://img.shields.io/badge/licence-free-9a6700">
+  <img alt="Licence" src="https://img.shields.io/badge/licence-free%20to%20use-9a6700">
 </p>
 
 <p align="center">
@@ -374,12 +374,29 @@ This is how the app is kept quick and light. Nothing here is exotic: they are th
 
 ## Installing
 
-1. Download `TaskbarAppGroupsSetup.exe` from the [latest release](../../releases/latest).
+1. Download `MaGrouperSetup.exe` from the [latest release](../../releases/latest).
 2. Run it. Choose **More info**, then **Run anyway**, see the note below.
-3. The wizard asks whether to install for everybody or just you, and where. The defaults are for all users and `C:\Program Files\Taskbar App Groups`.
+3. The wizard asks whether to install for everybody or just you, and where. The defaults are for all users and `C:\Program Files\MaGrouper`.
 
 > [!NOTE]
-> **Windows will warn you about this file.** It says "Windows protected your PC" because the installer is not signed by a paid certificate yet. That is a statement about the certificate and not about the file. Nothing else is bundled with it and nothing runs in the background unless you turn that on yourself.
+> **Windows will warn you about this file.** It says "Windows protected your PC" because the installer is not signed by a paid code signing certificate yet. That is a statement about the certificate and not about the file: an unsigned installer and a dangerous one look identical to Windows, so it warns about both. Nothing else is bundled with it, nothing runs in the background unless you turn that on yourself, and you do not have to take that on trust. Check it yourself with the two commands below.
+
+<details>
+<summary>Check the file is the one published here</summary>
+
+Every release page prints the **SHA256** of the installer next to the file, and Windows will tell you the SHA256 of the copy you downloaded. If the two match, character for character, the file on your disk is byte for byte the file published here and nothing has touched it in between.
+
+In PowerShell, in the folder you downloaded it to:
+
+```powershell
+Get-FileHash .\MaGrouperSetup.exe -Algorithm SHA256
+```
+
+Compare that against the hash shown beside `MaGrouperSetup.exe` on the [latest release](../../releases/latest). **If they do not match, delete the file**, and please open an issue saying where you got it from.
+
+You can also see what any machine makes of it by uploading the installer to [VirusTotal](https://www.virustotal.com/), which runs it past around seventy scanners at once. A handful of them flag unsigned installers on principle, so expect that rather than a clean sweep.
+
+</details>
 
 > [!TIP]
 > **Updates come from this page.** An installed copy looks here once a day and tells you when there is a newer one. It downloads and installs nothing until you press the button on its own settings screen.
@@ -434,6 +451,19 @@ No account, no telemetry, no analytics. Your groups live in one readable file un
 The uninstaller offers to remove your groups, the icons it composed and the shortcuts it wrote, and it puts back the icon of any other app you changed with it, which is the one leftover a general uninstaller could never fix. Say no and everything stays where it is.
 
 </details>
+
+---
+
+## Licence and copyright
+
+Copyright (c) 2026 MaGrouper. All rights reserved.
+
+**MaGrouper is free to use and is not open source.** Install it on as many machines as you own or use, at home or at work, for nothing. What you may not do is sell it, repackage it, rebrand it, or publish it anywhere else. The full terms are in **[LICENSE.txt](LICENSE.txt)**.
+
+**It is published in exactly two places: this page and the Microsoft Store.** If you find it on a download portal, a mirror, a torrent or any other app store, that copy did not come from here, nobody has checked what is in it, and I would be glad to hear about it on the [issues page](../../issues).
+
+> [!NOTE]
+> **The "Source code" archives on each release are not the source code of the app.** GitHub attaches a zip and a tar.gz to every release automatically, and they hold a copy of *this repository*, which is this page and its pictures. The app is not open source and its code has never been in here.
 
 ---
 

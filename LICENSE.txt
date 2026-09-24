@@ -1,0 +1,79 @@
+MaGrouper
+End user licence agreement
+
+Copyright (c) 2026 MaGrouper. All rights reserved.
+
+MaGrouper ("the software") is proprietary software. It is not open
+source. Downloading, installing or using it means you accept the terms below.
+
+
+1. What you may do
+
+You may install and use the software on any number of computers that you own or
+control, for personal or for commercial purposes, at no charge. You may keep a
+copy of the installer for your own backup.
+
+
+2. What you may not do
+
+You may not:
+
+  a. sell, rent, lease, sublicense or otherwise charge anybody for the
+     software;
+
+  b. redistribute the software or its installer, in whole or in part, on any
+     website, download site, mirror, app store, package manager or other
+     channel. It is published in exactly two places, its GitHub page,
+     https://github.com/npd1987/MaGrouper-Windows-Taskbar-Groups,
+     and the Microsoft Store;
+
+  c. modify, repackage, bundle, rebrand or create a derivative work of the
+     software, or distribute one;
+
+  d. reverse engineer, decompile or disassemble the software, or otherwise
+     attempt to derive its source code, except to the extent that this
+     restriction cannot lawfully be excluded;
+
+  e. remove or alter any copyright, trademark or licence notice in it.
+
+
+3. Ownership
+
+The software is licensed, not sold. All right, title and interest in it,
+including its source code, its design, its artwork and its name, remain with
+the copyright holder. Nothing in this licence transfers any of that to you.
+
+
+4. Early software, and future versions
+
+This release is early software, published for evaluation and feedback. The
+copyright holder may change the terms, the price or the availability of any
+future version at any time. Doing so does not affect your right to go on using
+a version you have already installed, under the terms it was published under.
+
+
+5. No warranty
+
+The software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and non-infringement.
+
+
+6. No liability
+
+To the maximum extent permitted by law, the copyright holder is not liable for
+any claim, damages or other liability, whether in an action of contract, tort
+or otherwise, arising out of or in connection with the software or its use.
+
+Nothing in this licence limits any right you have under the consumer law of
+your own country that cannot be excluded by agreement.
+
+
+7. Termination
+
+This licence ends automatically if you breach it. On termination you must stop
+using the software and remove it from your computers.
+
+
+Questions, and reporting a copy published anywhere other than those two places:
+https://github.com/npd1987/MaGrouper-Windows-Taskbar-Groups/issues
