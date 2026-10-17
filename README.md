@@ -197,7 +197,7 @@ A group can hold a mix of apps, folders and documents. Click a folder and Explor
 
 ### A file browser built in
 
-A third tab alongside your taskbar apps and everything installed. Quick access down the side with your standard folders, OneDrive, This PC and whatever Windows itself has pinned. A breadcrumb, a back arrow, search, headings you can sort by, columns you can drag wider, and a list or tiles at four sizes.
+A third tab alongside your taskbar apps and everything installed. Quick access down the side with your standard folders, OneDrive, This PC and whatever Windows itself has pinned. A breadcrumb, a back arrow, search, headings you can sort by, columns you can drag wider, and a list or tiles at four sizes. Ctrl+A selects everything listed, or only the folders when it is showing folders only.
 
 **Files draw their real picture**, the same thumbnail Explorer shows, and a video gets a strip of frames taken from inside it.
 
@@ -217,6 +217,14 @@ Pick several with Ctrl or Shift and they travel together, and one drag is one pr
 <td width="48%"><img src="media/drop-from-explorer.gif" width="100%" alt="Two files dragged out of a real Explorer window and dropped onto a group's card, where they appear as tiles"></td>
 </tr>
 </table>
+
+---
+
+## Open a group your way
+
+**Rest the pointer on a group's button and it opens**, no click needed. It is off until you switch it on, you choose how long the pointer rests first, and passing over the taskbar on the way somewhere else opens nothing.
+
+**Right click a group's button for Open all.** Every app, folder and file in the group opens in one go, in the group's order. An app that is already open comes forward rather than opening twice, and a big group asks first. The same menu goes straight to the group's visual editor or its settings, and the flyout's own right click menu carries the same three.
 
 ---
 
@@ -324,6 +332,7 @@ It is built to sit out of your way. Measured with the app's own instruments and 
 | Opening a group of 6 | About 110 to 130 ms |
 | Background services | **None.** No service and no scheduled task |
 | Added to your startup | **Nothing**, unless you switch that on yourself |
+| Open on hover, if you switch it on | **No CPU while the pointer is still or in other apps.** About 50 microseconds each time the pointer moves over the taskbar, the desktop or a File Explorer window, and nothing at all with it off. No extra program |
 | Network | One update check a day, and nothing else |
 
 **Nothing ticks while no flyout is on screen.** The timers that keep previews and running dots current only run while there is a flyout to keep current.
@@ -334,6 +343,7 @@ It is built to sit out of your way. Measured with the app's own instruments and 
 - **A flyout left open on screen costs about 1% of one core** for as long as you leave it up, because it is a live thing refreshing what it shows.
 - **Memory grows as you use it and then stops.** Every app icon is read out of Windows once and kept, about 160 KB each, which is why the second time you open a group it is instant. It does not hand that back while it is running, and that is deliberate: giving it back would mean re-reading the icons on your next click. Close the app if you want the memory.
 - **The first click after signing in takes one to three seconds**, and almost all of that is Windows starting the program rather than anything this app does. Turning on "start with Windows" moves that cost to sign-in: measured at 426 ms without it and 232 ms with it, on a group of 14.
+- **Open on hover listens only while the pointer moves over the taskbar, the desktop or a File Explorer window.** Each move there costs about 50 microseconds, which comes to about 0.5% of one core while the pointer keeps moving along the taskbar and nothing once it stops. It uses a standard Windows accessibility event, the kind screen readers use, with no mouse hook and nothing added to Explorer. Turning it on also turns on "start with Windows", and says so, so hover works straight after you sign in. Switched off, it listens to nothing.
 - **A very large group costs more.** 221 apps in one group opens in 285 to 340 ms rather than 120 to 150.
 - **The memory figures come from a heavy setup**: 13 groups, 446 apps and folders between them, and 230 pictures read in at sign-in. A handful of groups costs less than that.
 - Measured on an Intel Core i7-1165G7, 16 GB, Windows 11 Home, at 100% scaling, on a debug build, which is the slower of the two. A release build was measured against the same workload and was not faster, so none of these numbers is flattered by the build.
@@ -441,7 +451,7 @@ Nothing is injected into Explorer, no shell extension is registered, and the tas
 <details>
 <summary>What it does with your data, which is nothing</summary>
 
-No account, no telemetry, no analytics. Your groups live in one readable file under your own app data folder, and the only thing it ever sends is a request to this page asking what the newest version is. It does not start with Windows unless you switch that on.
+No account, no telemetry, no analytics. Your groups live in one readable file under your own app data folder, and the only thing it ever sends is a request to this page asking what the newest version is. It does not start with Windows unless you switch that on, or switch on open on hover, which turns it on for you and says so.
 
 </details>
 
