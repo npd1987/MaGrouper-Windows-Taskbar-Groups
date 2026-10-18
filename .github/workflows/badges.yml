@@ -1,0 +1,47 @@
+# Writes the numbers behind the README's release and downloads badges.
+# shields.io reads these two files instead of asking GitHub itself, so its
+# shared token pool running dry can no longer turn a badge into an error.
+name: badges
+
+on:
+  release:
+    types: [published, edited, deleted]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: badges
+  cancel-in-progress: false
+
+jobs:
+  badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read the latest release and the total downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag=$(gh api "repos/$GITHUB_REPOSITORY/releases/latest" --jq .tag_name)
+          total=$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases" --jq '[.[].assets[].download_count] | add // 0' | jq -s add)
+          mkdir -p out
+          jq -n --arg m "$tag" '{schemaVersion: 1, label: "release", message: $m, color: "0969da"}' > out/release.json
+          jq -n --arg m "$total" '{schemaVersion: 1, label: "downloads", message: $m, color: "1a7f37"}' > out/downloads.json
+          cat out/*.json
+
+      - name: Publish them on the badges branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cd out
+          git init -q -b badges
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add release.json downloads.json
+          git commit -q -m "Badge numbers"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/$GITHUB_REPOSITORY" badges
