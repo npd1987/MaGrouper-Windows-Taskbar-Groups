@@ -40,7 +40,7 @@
 
 Windows 11 gives you one row for pinned apps and no folders. Pin everything you use and the row runs out of taskbar; pin only a few and the rest live in the Start menu, two clicks away.
 
-This app puts them in groups. A group is one icon on your taskbar, and behind it is a small panel holding the apps you put in it. A group can hold folders and documents as well as apps, and you decide what shape the panel is.
+This app puts them in groups. A group is one icon on your taskbar, and behind it is a small panel holding the apps you put in it. A group can hold folders, documents and other groups as well as apps, and you decide what shape the panel is.
 
 Nothing is replaced and nothing is patched: a group is an ordinary Windows shortcut with an icon of its own, so the taskbar treats it like any other pinned app.
 
@@ -48,13 +48,36 @@ Nothing is replaced and nothing is patched: a group is an ordinary Windows short
 
 ## Everything you have, ready to drag
 
-This is the whole of using it. Every app on your taskbar and every app installed on the machine, found for you and searchable, packaged apps and ordinary programs alike. Nothing to hunt down and no paths to type.
+This is the whole of using it. Every app on your taskbar and every app installed on the machine, found for you and searchable, packaged apps and ordinary programs alike. Nothing to hunt down and no paths to type. Pin something new to the taskbar and it shows up here on its own, and a refresh button is there if you want to ask again.
 
 Select what you want, with Ctrl or Shift for several at once, and drag them across as one stack. A run of apps lands in the order it was in, wherever you point it, and **anything you change here is easy to undo**.
 
 <p align="center">
   <img src="media/drag.gif" width="900" alt="Three apps picked with Ctrl, dragged across as one stack, dropped into a group, then undone with one Ctrl+Z">
 </p>
+
+**Add to a group from every tab.** Pick apps, folders or files in any tab and send them to a group with a button, no drag needed. **And add groups from a group's own Add panel**, so a group can go inside another one without leaving the page you are on.
+
+---
+
+## Groups inside groups
+
+Put a group into another group and its icon sits in the flyout like any app. Click it and its own flyout opens from the first one, so one taskbar button can hold a whole tree: Work, and inside it Writing, Design and Code.
+
+<table>
+<tr>
+<td width="53%"><img src="media/nested-open.png" width="100%" alt="The Tools flyout holding a BROWSERS group tile, and the BROWSERS flyout opened from it above"></td>
+<td width="47%"><img src="media/nested-over.png" width="100%" alt="The Design group opened from inside the Tools flyout, drawn over it while Tools dims behind"></td>
+</tr>
+<tr>
+<td align="center"><sub>A group inside Tools opens its own flyout from the first one.</sub></td>
+<td align="center"><sub>The flyout you came from dims behind the one you opened.</sub></td>
+</tr>
+</table>
+
+**Every level is a real group.** It keeps its own icon, its own shape and its own settings, and the pen and gear work at whichever level you are on.
+
+**The same group can go in more than once**, and one group can sit inside as many others as you like.
 
 ---
 
@@ -87,6 +110,8 @@ Templates and a free hand designer. These are real group icons off a real taskba
 
 <sub>Real group icons off one taskbar, composed by the app at the size Windows asks for. Nothing here was drawn for the screenshot.</sub>
 
+**Text only icons are yours to tune**: the size and weight of the lettering, the corner rounding of the tile, and you can type the words straight onto the tile itself.
+
 ---
 
 ## Shape the flyout, from inside the flyout
@@ -109,13 +134,15 @@ Open a group, press the pen, and the flyout itself becomes editable in place.
 
 **Drag an edge and the grid reflows.** One row becomes two, or five. You are dragging tiles into place rather than stretching a box, so the flyout only ever holds whole rows and never has empty space in it.
 
+**Or make it a list.** Each app becomes a wide card with its name beside its icon, in one column or several, for groups where the names matter more than the pictures.
+
 **Names, from five lines down to none.** A column of choices sits beside the flyout while you edit, and the lowest is **No names**: clean icons and nothing else.
 
 **Hide the group's name, or type a new one** straight into the flyout.
 
 **Tooltips on or off**, so a group can be as quiet as you like.
 
-**Rearrange the apps** by dragging them, and take one out with the badge on its corner.
+**Rearrange the apps** by dragging them, and take one out with the badge on its corner. Or **sort them** from the button beside the group's heading: A to Z, newest or oldest first, with apps, folders and files kept together in the order you choose, and your own order one click away.
 
 **Undo and redo the whole time.** Enter or Done keeps the shape. **Esc puts it back exactly as it was.**
 
@@ -123,6 +150,14 @@ Open a group, press the pen, and the flyout itself becomes editable in place.
 <td width="48%"><img src="media/flyout-shapes.png" width="100%" alt="One group drawn four ways: one row with names, three rows with names, three rows with no names, and the same with the group's name hidden"></td>
 </tr>
 </table>
+
+<p align="center">
+  <img src="media/flyout-list-view.png" width="392" alt="A Work group as a list view flyout: Word, Excel, PowerPoint, Outlook, Teams, To Do, OneNote and Calendar in two columns, each name beside its icon">
+</p>
+
+<p align="center">
+  <sub>The list view, in two columns. The dimmed Teams tile is an app that is no longer installed.</sub>
+</p>
 
 Every one of those is a global setting with a per group override, so your groups can all match, or each one can be its own thing. Where a flyout opens is yours too: centred on its button, lined up on its left hand app, or lined up on its right hand app.
 
@@ -190,6 +225,8 @@ A group can hold a mix of apps, folders and documents. Click a folder and Explor
   <img src="media/mixed-group.png" width="820" alt="A flyout holding apps, a folder and a document side by side, each with its real Windows icon">
 </p>
 
+**Rename or move a file and the group follows it.** A file or folder that moves keeps working from its group, and a small mark tells you MaGrouper has followed it, so nothing changes behind your back.
+
 <table>
 <tr>
 <td width="48%"><img src="media/browser.png" width="100%" alt="The Folders and files tab: quick access down the left, a breadcrumb, a search box, sortable headings and a list of files with their real thumbnails"></td>
@@ -218,11 +255,48 @@ Pick several with Ctrl or Shift and they travel together, and one drag is one pr
 </tr>
 </table>
 
+<p align="center">
+  <img src="media/flyout-moved.png" width="396" alt="A Trip flyout holding a folder, two text files, a spreadsheet with a small blue mark in its corner, Weather and Edge">
+</p>
+
+<p align="center">
+  <sub>The budget was moved into another folder. The small blue mark says MaGrouper followed it.</sub>
+</p>
+
+---
+
+## Start each app your way
+
+Every app, file and folder in a group has its own start options, so one tile can open exactly the thing you want rather than the app's front door.
+
+<p align="center">
+  <img src="media/start-options.png" width="560" alt="The Start options card for Google Chrome: Start with set to a profile, Start in its program folder, Run as administrator, the window set to Maximised, and a box showing exactly what a click starts">
+</p>
+
+- **Start with**: the arguments the app is started with, such as a particular profile, playlist or project.
+- **Start in**: the folder it starts in.
+- **Run as administrator**, and Windows asks you once, as it should.
+- **Window size**: normal, minimised or maximised.
+
+**The same app can go into a group more than once**, each copy with its own start options. Two Chrome tiles, one for work and one for home, is one group.
+
+---
+
+## Bring your groups with you
+
+**Export your groups to a file**, with your settings too if you want them, and import them on another PC.
+
+**Or make a group from what you already have**: a folder, a handful of files, or a plain list with one path or app per line.
+
+<p align="center">
+  <img src="media/import.png" width="546" alt="The Import groups window showing a list file it read, Weekend apps, five items with their icons, and an Import 1 group button">
+</p>
+
 ---
 
 ## Open a group your way
 
-**Rest the pointer on a group's button and it opens**, no click needed. It is off until you switch it on, you choose how long the pointer rests first, and passing over the taskbar on the way somewhere else opens nothing.
+**Open on hover.** A group opens with a click by default. Switch on open on hover in settings and **resting the pointer on a group's button opens it**, no click needed. You choose how long the pointer rests first, and passing over the taskbar on the way somewhere else opens nothing.
 
 **Right click a group's button for Open all.** Every app, folder and file in the group opens in one go, in the group's order. An app that is already open comes forward rather than opening twice, and a big group asks first. The same menu goes straight to the group's visual editor or its settings, and the flyout's own right click menu carries the same three.
 
@@ -276,6 +350,17 @@ The same designer will rewrite the icon of an app that is not in any group, so y
 </tr>
 
 <tr>
+<td width="46%" valign="top">
+
+### Knows when an app has gone
+
+Uninstall an app that is in a group and its tile dims and takes a small mark rather than turning into a blank square. Click it and you get the ways out: **Replace with** the newer version when MaGrouper can find one, or **Remove from group**. It never removes anything on its own.
+
+</td>
+<td width="54%"><img src="media/not-installed-card.png" width="100%" alt="A Work flyout with the old Microsoft Teams tile dimmed and marked, and the card it opens: not installed on this PC any more, with a Remove from group button"></td>
+</tr>
+
+<tr>
 <td width="46%"><img src="media/editor-settings.png" width="100%" alt="Settings"></td>
 <td width="54%" valign="top">
 
@@ -316,67 +401,81 @@ Save, and a small window holds your group's icon. **Drag it out of that window o
 </p>
 
 > [!WARNING]
-> **One thing is by hand, and it has to be.** Windows 11 does not let any program pin or unpin a taskbar button, so the last step is yours: drag the group onto your taskbar, then unpin the apps you have just grouped. The app names exactly which icons to remove and reminds you on the way out.
+> **One thing is by hand, and it has to be.** Windows 11 does not let any program unpin a taskbar button, so the last step is yours: once your group is on the taskbar, unpin the apps you have just grouped. The app names exactly which icons to remove and reminds you on the way out.
 
 ---
 
 ## Performance and optimization
 
-It is built to sit out of your way. Measured with the app's own instruments and with Windows' own process counters, and every number below is reproducible.
+It is built to sit out of your way and answer the moment you click.
+
+> [!NOTE]
+> **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling, set up with 14 groups holding nearly 500 apps, folders and files between them. The opening times are real clicks taken from the app's own log. A newer PC will be quicker, and one that is short of memory or has a lot open will be slower, but the shape is the same everywhere: a cold open is a fraction of a second to a couple of seconds, a warm open is a blink.
+
+There are two kinds of open, and they are the only two times you will ever see:
+
+- **A cold open** is the first click when MaGrouper is not running yet, after you sign in with "start with Windows" off, or after you have closed it.
+- **A warm open** is every click after that, while MaGrouper waits quietly in the background.
+
+### Opening a group
+
+| | Time to the flyout on screen |
+|---|---|
+| **Cold open**, any group | **About 0.8 seconds** |
+| **Warm open**, 5 to 12 apps | **About 35 to 60 ms** |
+| **Warm open**, 14 to 26 apps | **About 70 to 140 ms** |
+| **Warm open**, 142 apps | About 190 ms |
+| **Warm open**, 215 apps | About a quarter of a second |
+
+### Sitting in the background
 
 | | |
 |---|---|
-| Sitting in the background, nothing on screen | **No measurable CPU.** A measured zero over four separate minutes, before and after opening groups |
-| Memory, in that state | **About 77 MB**, and about 125 MB once you have opened your groups |
-| Opening a group of 14 apps | **About 120 to 150 ms** |
-| Opening a group of 6 | About 110 to 130 ms |
+| CPU, nothing on screen | **No measurable CPU** |
+| Memory, two seconds after a flyout closes | **About 12 MB** in Task Manager |
 | Background services | **None.** No service and no scheduled task |
 | Added to your startup | **Nothing**, unless you switch that on yourself |
 | Open on hover, if you switch it on | **No CPU while the pointer is still or in other apps.** About 50 microseconds each time the pointer moves over the taskbar, the desktop or a File Explorer window, and nothing at all with it off. No extra program |
 | Network | One update check a day, and nothing else |
 
-**Nothing ticks while no flyout is on screen.** The timers that keep previews and running dots current only run while there is a flyout to keep current.
-
-<details>
-<summary>The detail, including what it does cost</summary>
-
-- **A flyout left open on screen costs about 1% of one core** for as long as you leave it up, because it is a live thing refreshing what it shows.
-- **Memory grows as you use it and then stops.** Every app icon is read out of Windows once and kept, about 160 KB each, which is why the second time you open a group it is instant. It does not hand that back while it is running, and that is deliberate: giving it back would mean re-reading the icons on your next click. Close the app if you want the memory.
-- **The first click after signing in takes one to three seconds**, and almost all of that is Windows starting the program rather than anything this app does. Turning on "start with Windows" moves that cost to sign-in: measured at 426 ms without it and 232 ms with it, on a group of 14.
-- **Open on hover listens only while the pointer moves over the taskbar, the desktop or a File Explorer window.** Each move there costs about 50 microseconds, which comes to about 0.5% of one core while the pointer keeps moving along the taskbar and nothing once it stops. It uses a standard Windows accessibility event, the kind screen readers use, with no mouse hook and nothing added to Explorer. Turning it on also turns on "start with Windows", and says so, so hover works straight after you sign in. Switched off, it listens to nothing.
-- **A very large group costs more.** 221 apps in one group opens in 285 to 340 ms rather than 120 to 150.
-- **The memory figures come from a heavy setup**: 13 groups, 446 apps and folders between them, and 230 pictures read in at sign-in. A handful of groups costs less than that.
-- Measured on an Intel Core i7-1165G7, 16 GB, Windows 11 Home, at 100% scaling, on a debug build, which is the slower of the two. A release build was measured against the same workload and was not faster, so none of these numbers is flattered by the build.
-
-</details>
-
 ### Optimization techniques
 
-This is how the app is kept quick and light. Nothing here is exotic: they are the standard techniques, applied where a measurement said they were needed rather than where they looked clever. The whole of it came out of an audit of where the time and the memory actually went, measured on a real machine rather than reasoned about from the source, and every saving below is a before and after taken on the same machine minutes apart.
+This is how the app is kept quick and light. Nothing here is exotic: they are the standard techniques, applied where a measurement said they were needed rather than where they looked clever. Every saving below is a before and after, measured minutes apart on the same PC.
 
+- **A native launcher for every click.** A click on a group's button starts a tiny helper whose only job is to hand the click to the app already running. It used to be a .NET program, so every click started the .NET runtime first, and after a long gap that could take over a second. It is now a small native program that never loads .NET: the handover went from **about 90 ms to about 17**. If the app is not running, the same file starts it as before.
+- **Handing memory back as soon as nothing is on screen.** Two seconds after the last flyout closes, or straight after the main window closes, the app returns its working memory to Windows: **114 MB down to 12** after a flyout, **204 down to 19** after the main window. Nothing it has read is thrown away, which is why the next open costs about 8 ms more and not a second.
+- **A faster cold open.** The app records which of its own code runs at start up and has it compiled on several cores at once on the next start. The cold open went from **1,020 ms to 836**.
+- **Doing the expensive work before the click rather than during it.** Once your first flyout is on screen, a background thread works out what everything in your other groups launches: **the second group you open went from 1,378 ms to 479**. With "start with Windows" on, the first window is built in advance at sign-in, off the side of the screen, and **the first click of the day went from 426 ms to 232**.
+- **Event driven rather than polling.** Nothing ticks while no flyout is on screen. The timers that keep previews and running dots current only run while there is a flyout to keep current, which is why the background figure is a measured zero rather than a small number.
+- **Redrawing only what changed.** Dropping an app into a group, or changing a setting, redraws that one card rather than rebuilding the whole page, and the main window keeps the screens you have visited rather than building them again.
 - **UI virtualization.** The built in file browser builds only the rows you can see, about twenty of them out of nine hundred, and throws each one away as it scrolls off. Opening a folder of 943 files went from **846 to 977 ms down to 160**, and the tiles view of the same folder from **894 ms to 90**.
 - **Filtering in memory instead of rebuilding.** Both search boxes filter a list they already hold rather than tearing every tile down and building new ones for each letter you type. A keystroke in the installed apps search went from **1,249 ms to 30**, and one in the file browser's from **322 to 555 ms down to 92**.
-- **Caching what Windows is slow to answer.** Every app's icon is read out of the shell once and kept, about 160 KB each, which is why the second time you open a group it is instant. The bitmaps are frozen, so the background thread and the drawing thread share one copy instead of taking one each.
+- **Caching what Windows is slow to answer.** Every app's icon is read out of the shell once and kept, about 160 KB each, which is why a warm open is so quick. The bitmaps are frozen, so the background thread and the drawing thread share one copy instead of taking one each.
 - **Decoding pictures at the size they are drawn**, and shrinking a picture once when you choose it rather than on every load. The photograph this was built for went from **1.3 MB and 189 ms a load to 158 KB and 25 ms**.
 - **Lazy work.** Artwork is only requested for what is on screen, plus one screen either side. Naming an app and finding its picture are both ladders of five steps, and an app answered by the first step never pays for the other four.
-- **Doing the expensive work before the click rather than during it.** Once your first flyout is on screen, a background thread works out what everything in your other groups launches: **the second group you open went from 1,378 ms to 479**. With "start with Windows" on, the first window is built in advance at sign-in, off the side of the screen, and **the first click of the day went from 426 ms to 232**.
+- **Prioritising the queue.** There is one thread reading pictures and one queue, so the order they are asked for is the order tiles fill in: the group you clicked, then the groups on your taskbar, then the rest.
 - **Background threads that give way.** All of that runs at below normal priority, so it yields to whatever you are actually doing, and each one writes down what it did in the app's own log. Work you cannot see is the thing this product does not do.
-- **Prioritising the queue.** There is one thread reading pictures and one queue, so the order they are asked for is the order tiles fill in: the group you clicked, then the groups on your taskbar, then the rest. It used to be the order they sit in the settings file, which could put four hundred pictures you are not looking at in front of the fourteen you are.
-- **Event driven rather than polling.** Nothing ticks while no flyout is on screen. That is why sitting in the background with nothing on screen is a measured zero rather than a small number.
-- **Measuring the click itself, line by line.** A click on a group starts a small helper process whose whole job is to hand the click to the app already running and exit, and it was two thirds of what you wait for. Timed stamp by stamp, its own work went from **42 ms to 14**: reading when it started no longer loads a framework class it does not need, reading the running app's process id no longer loads Windows' language data to read four digits, finding that app asks about one named pipe instead of listing the 427 on the machine, and a click carrying nothing but a group name skips the command line parsing altogether.
 - **Coalescing repeated work.** Opening a large group used to queue **138 identical layout checks**; they now collapse into one, because running the check once and running it 138 times give the same answer.
-- **Bounded logs and bounded caches.** The app's own trace file is capped at 256 KB rather than growing forever, and the cap is measured against the file itself rather than a running total, because a total kept in one process is wrong the moment anything else writes to it. Every cache in it is limited by something your machine has a fixed number of.
-- **Leaks found and closed.** Ten keystrokes on a test bench were leaving **310 event listeners** behind; two stray subscriptions were holding every editor window ever opened in memory, at **about 92 drawing handles an open**; and an animation left running after a drag in the editor was keeping the whole drawing loop alive with nothing on screen, at **3.8% of one core**. All three are closed, and each one has a check that fails if it comes back.
+- **Bounded logs and bounded caches.** The app's own trace file is capped at 256 KB rather than growing forever, and every cache in it is limited by something your machine has a fixed number of.
+- **Memory leaks checked for and fixed.** The main window and a flyout were each opened and closed 24 times in a row, and the memory the app holds did not grow. Every leak found on the way has a check that fails if it ever comes back.
+
+### What it does cost
+
+- **A flyout left open on screen costs about 1% of one core** for as long as you leave it up, because it is a live thing refreshing what it shows.
+- **Handing memory back has one real cost.** On a machine short of RAM, Windows reuses that memory first, so a warm open after a long gap can be slower sooner than it would otherwise be. With RAM to spare it makes no difference.
+- **A cold open after a long gap, on a machine short of memory, can take one to two seconds**, and almost all of that is Windows reading the program off the disk. Turning on "start with Windows" moves that cost to sign-in.
+- **Open on hover listens only while the pointer moves over the taskbar, the desktop or a File Explorer window**, which comes to about 0.5% of one core while the pointer keeps moving along the taskbar and nothing once it stops. It uses a standard Windows accessibility event, the kind screen readers use, with no mouse hook and nothing added to Explorer. Turning it on also turns on "start with Windows", and says so. Switched off, it listens to nothing.
+- **A very large group costs more**, as the table shows: 215 apps takes about a quarter of a second where a dozen takes well under a tenth.
+- **None of these numbers is flattered by the build.** They were taken on a debug build, the slower of the two, and a release build measured against the same work was not faster.
 
 <details>
 <summary>What was measured and then deliberately not built</summary>
 
-- **The switch everybody reaches for first.** ReadyToRun, which is meant to make a .NET app start faster, was measured at 527 ms against 525. It is not used, and the reason is written into the project file so nobody tries it twice.
+- **The switch everybody reaches for first.** ReadyToRun is meant to make a .NET app start faster. Measured here it made no difference, 527 ms against 525, so it is not used.
 - **A different garbage collector.** Left alone on purpose. The default is the one Microsoft documents for desktop apps, and the server one would trade memory for throughput this app does not need.
 - **Throwing away cached pictures.** An entry was measured at 2 to 9 KB, so an eviction policy would have added a moving part to the path everything draws through and saved almost nothing.
-- **Drawing only the tiles a flyout can show.** Built, measured, and it ships switched off: it saved 9 ms on one deliberately enormous group and nothing at all on the 226 app one it was aimed at. The code is still there behind one constant.
-- **A release build.** Measured against the same work as the debug one and it was not faster, because the cost is Windows' own layout work and that is identical in both.
-- **Dropping one message from the handshake between the two processes.** It was worth 2.3 ms and it hung every click, because that message was doing flow control as well as saying hello. It is staying, and the reason is written in the code above it.
+- **Drawing only the tiles a flyout can show.** Built, measured, and it ships switched off: it saved 9 ms on one deliberately enormous group and nothing at all on the 226 app one it was aimed at.
+- **A setting for the memory hand back.** It is simply on. It costs about 8 ms on the next open and saves around 100 MB, so there was nothing for a switch to choose between.
 
 </details>
 
@@ -415,7 +514,7 @@ You can also see what any machine makes of it by uploading the installer to [Vir
 
 - Windows 11, 64 bit. It runs on Windows 10 but the taskbar behaves differently and is untested.
 - Nothing else. .NET is inside the installer.
-- About 156 MB on disk once installed.
+- About 160 MB on disk once installed.
 
 ---
 
@@ -431,13 +530,13 @@ If you redraw a group's icon after pinning it, the taskbar goes on showing the o
 </details>
 
 <details>
-<summary>Pinning and unpinning is yours to do</summary>
+<summary>Pinning is a drag, and unpinning is yours to do</summary>
 
-No program can pin a taskbar button on Windows 11, so you put a group there yourself, once. Saving a group opens a small window holding its icon, and **you drag that onto your taskbar and drop it where you want it**, which also chooses its position in the row.
+Saving a group opens a small window holding its icon, and **you drag that onto your taskbar and drop it where you want it**, which also chooses its position in the row.
 
 There is a setting that goes the older way instead: the shortcuts folder opens with the group's shortcut already selected, and you drag it out of there or right click and choose Pin to taskbar.
 
-Unpinning is entirely by hand either way, and the app names which icons to remove.
+Unpinning is entirely by hand either way, because no program may unpin a taskbar button on Windows 11, and the app names which icons to remove.
 
 </details>
 
@@ -458,7 +557,7 @@ No account, no telemetry, no analytics. Your groups live in one readable file un
 <details>
 <summary>Uninstalling takes its things with it</summary>
 
-The uninstaller offers to remove your groups, the icons it composed and the shortcuts it wrote, and it puts back the icon of any other app you changed with it, which is the one leftover a general uninstaller could never fix. Say no and everything stays where it is.
+The uninstaller offers to remove your groups, the icons it composed and the shortcuts it wrote, and it puts back the icon of any other app you changed with it, which is the one leftover a general uninstaller could never fix. Say no and everything stays where it is. Export your groups first if you might want them back.
 
 </details>
 
