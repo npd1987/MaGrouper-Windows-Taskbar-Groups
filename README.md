@@ -614,7 +614,7 @@ Copyright (c) 2026 Noah P Davidson. All rights reserved.
 **It is sold in one place: [anythinguseful.dev](https://anythinguseful.dev/magrouper).** If you find it on a download portal, a mirror, a torrent or any other app store, that copy did not come from here, nobody has checked what is in it, and I would be glad to hear about it on the [issues page](../../issues).
 
 > [!NOTE]
-> **The free C# version, MaGrouper Classic 2.1.9, stays free** on the [releases page](../../releases/latest). It has everything up to 2.1.9, and it will not be updated again. Groups on the desktop, the speed and memory figures above, and every new feature from here on are in the paid version. The paid version's installer can replace the classic one and keep all your groups.
+> **The free C# version, MaGrouper Classic 2.1.9, stays free** on the [releases page](../../releases/latest). It has everything up to 2.1.9, and it will not be updated again. Its original page is kept in full in [README-CLASSIC.md](README-CLASSIC.md). Groups on the desktop, the speed and memory figures above, and every new feature from here on are in the paid version. The paid version's installer can replace the classic one and keep all your groups.
 
 > [!NOTE]
 > **The "Source code" archives on a release are not the source code of the app.** GitHub attaches a zip and a tar.gz to every release automatically, and they hold a copy of *this repository*, which is this page and its pictures. The app is not open source and its code has never been in here.
