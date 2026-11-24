@@ -15,19 +15,29 @@
   <img alt="One-time purchase" src="https://img.shields.io/badge/one--time%20purchase-yours%20for%20life-9a6700">
 </p>
 
-<p align="center">
-  <a href="https://anythinguseful.dev/magrouper"><b>Buy MaGrouper 2.2 for Windows 11</b></a>
-  &nbsp;&middot;&nbsp;
-  <a href="../../releases/latest">Free classic version (2.1.9)</a>
-  &nbsp;&middot;&nbsp;
-  <a href="https://anythinguseful.dev/magrouper/changelog">Release notes</a>
-  &nbsp;&middot;&nbsp;
-  <a href="https://anythinguseful.dev/magrouper/redownload">Download again</a>
-</p>
+<div align="center">
+<table>
+<tr>
+<th align="center">MaGrouper 2.2.0 &nbsp;(new)</th>
+<th align="center">MaGrouper Classic 2.1.9</th>
+</tr>
+<tr>
+<td align="center">Native C++ &middot; 3.9 MB download<br>$3 once, every update included</td>
+<td align="center">.NET / WPF &middot; about 48 MB download<br>Free, no longer updated</td>
+</tr>
+<tr>
+<td align="center"><a href="https://anythinguseful.dev/magrouper"><b>Buy MaGrouper 2.2.0</b></a></td>
+<td align="center"><a href="../../releases/latest"><b>Download Classic free</b></a> (GitHub)</td>
+</tr>
+<tr>
+<td align="center"><sub><a href="https://anythinguseful.dev/magrouper/changelog/">2.2.0 release notes</a> &middot; <a href="https://anythinguseful.dev/magrouper/redownload/">Already bought it? Download again</a></sub></td>
+<td align="center"><sub><a href="../../releases">Classic release notes</a></sub></td>
+</tr>
+</table>
+</div>
 
 <p align="center">
-  One payment, yours for life, updates included. One file, about 3.9 MB.<br>
-  No subscription, no account, no telemetry.
+  No subscription, no account, no telemetry. The rest of this page describes 2.2.0.
 </p>
 
 <p align="center">
@@ -424,7 +434,7 @@ Save, and a small window holds your group's icon. **Drag it out of that window o
 It is built to sit out of your way and answer the moment you click. This is MaGrouper rewritten in native C++: the same look and the same behavior as the C# version, with no runtime underneath it, so it starts faster, opens faster and holds a fraction of the memory.
 
 > [!NOTE]
-> **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling. That is the same PC the C# version's figures came from, and both versions were measured by one script on the same day, on the same four groups of 8, 20, 142 and 215 apps made from that PC's Start menu. Every time is the app's own log line, written the moment the flyout is on screen. A newer PC will be quicker and one that is short of memory will be slower, but the shape is the same everywhere.
+> **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling. That is the same PC the C# version's figures came from, and both versions were measured by one script on the same day, on the same four groups of 8, 20, 142 and 215 apps made from that PC's Start menu. Every time is the app's own log line, written the moment the flyout is on screen. A newer PC will be quicker and one that is short of memory will be slower, but the shape is the same everywhere. These are one PC's results, not a promise: your times will depend on your hardware, but because the app does so little per click, a group should open in well under a tenth of a second on most PCs.
 
 There are two kinds of open, and they are the only two times you will ever see:
 
@@ -461,7 +471,7 @@ Each warm figure is the middle of six opens. The C++ times start when the click'
 
 | | C++ version | C# version |
 |---|---|---|
-| The setup program | **3.9 MB** | About 47 MB |
+| The setup program | **3.9 MB** | About 48 MB |
 | On disk once installed | **About 6 MB** | About 160 MB |
 | Files installed | **One program** and its menu icons | The program and about 240 runtime files |
 
@@ -576,7 +586,7 @@ $3, once. Every future update, on every computer you use, with no subscription, 
 <details>
 <summary>Is there still a free version?</summary>
 
-Yes. MaGrouper Classic 2.1.9, the original C# version, stays free on the [releases page](../../releases/latest). It won't be updated again; new features such as groups on the desktop are in 2.2.
+Yes. MaGrouper Classic 2.1.9, the original C# version, stays free on the [releases page](../../releases/latest). It won't be updated again; new features such as groups on the desktop are in 2.2.0.
 
 </details>
 
