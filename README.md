@@ -2,28 +2,32 @@
   <img src="media/app-icon.png" width="112" alt="MaGrouper">
 </p>
 
-<h1 align="center">MaGrouper - Windows Taskbar Groups</h1>
+<h1 align="center">MaGrouper: Taskbar groups for Windows 11</h1>
 
 <p align="center">
-  Fold a crowded Windows 11 taskbar into a few group icons.<br> Click one, and the apps inside fan out with live previews of their windows.
+  MaGrouper adds taskbar groups to Windows 11: pin a group of apps, folders and files to the taskbar, and click it to open them with live window previews.
 </p>
 
 <p align="center">
-  <img alt="Latest release" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnpd1987%2FMaGrouper-Windows-Taskbar-Groups%2Fbadges%2Frelease.json">
-  <img alt="Downloads" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnpd1987%2FMaGrouper-Windows-Taskbar-Groups%2Fbadges%2Fdownloads.json">
+  <img alt="Version" src="https://img.shields.io/badge/version-2.2.0-0e7490">
   <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%2011-0e7490">
   <img alt="Nothing else to install" src="https://img.shields.io/badge/nothing%20else%20to%20install-8250df">
-  <img alt="Licence" src="https://img.shields.io/badge/licence-free%20to%20use-9a6700">
+  <img alt="One-time purchase" src="https://img.shields.io/badge/one--time%20purchase-yours%20for%20life-9a6700">
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><b>Download for Windows 11</b></a>
+  <a href="https://anythinguseful.dev/magrouper"><b>Buy MaGrouper 2.2 for Windows 11</b></a>
   &nbsp;&middot;&nbsp;
-  <a href="../../releases">Release notes</a>
+  <a href="../../releases/latest">Free classic version (2.1.9)</a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://anythinguseful.dev/magrouper/changelog">Release notes</a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://anythinguseful.dev/magrouper/redownload">Download again</a>
 </p>
 
 <p align="center">
-  One file, about 47 MB. No .NET to install, no account, no telemetry.
+  One payment, yours for life, updates included. One file, about 3.5 MB.<br>
+  No subscription, no account, no telemetry.
 </p>
 
 <p align="center">
@@ -302,6 +306,16 @@ Every app, file and folder in a group has its own start options, so one tile can
 
 ---
 
+## Groups on your desktop
+
+**A group can sit on your desktop as well as, or instead of, the taskbar.** Choose **Add to desktop** from a group's ⋯ menu or from its right click menu in the Groups tab, or simply drag a group out of the window onto the desktop. Its icon is the group's own picture, and opening it shows the same flyout, right beside the icon.
+
+**Put a desktop flyout anywhere.** In its visual editor, drag the grab bar and the flyout moves freely, to any edge or corner of the screen, and once it has moved you can resize it from all four sides. It remembers its spot, and a right click on the grab bar takes it back to where it started.
+
+**Drop a group's desktop icon into any group** and it goes in as a group inside the group.
+
+---
+
 ## What it does
 
 <table>
@@ -407,10 +421,10 @@ Save, and a small window holds your group's icon. **Drag it out of that window o
 
 ## Performance and optimization
 
-It is built to sit out of your way and answer the moment you click.
+It is built to sit out of your way and answer the moment you click. This is MaGrouper rewritten in native C++: the same look and the same behaviour as the C# version, with no runtime underneath it, so it starts faster, opens faster and holds a fraction of the memory.
 
 > [!NOTE]
-> **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling, set up with 14 groups holding nearly 500 apps, folders and files between them. The opening times are real clicks taken from the app's own log. A newer PC will be quicker, and one that is short of memory or has a lot open will be slower, but the shape is the same everywhere: a cold open is a fraction of a second to a couple of seconds, a warm open is a blink.
+> **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling. That is the same PC the C# version's figures came from, and both versions were measured by one script on the same day, on the same four groups of 8, 20, 142 and 215 apps made from that PC's Start menu. Every time is the app's own log line, written the moment the flyout is on screen. A newer PC will be quicker and one that is short of memory will be slower, but the shape is the same everywhere.
 
 There are two kinds of open, and they are the only two times you will ever see:
 
@@ -419,106 +433,93 @@ There are two kinds of open, and they are the only two times you will ever see:
 
 ### Opening a group
 
-| | Time to the flyout on screen |
-|---|---|
-| **Cold open**, any group | **About 0.8 seconds** |
-| **Warm open**, 5 to 12 apps | **About 35 to 60 ms** |
-| **Warm open**, 14 to 26 apps | **About 70 to 140 ms** |
-| **Warm open**, 142 apps | About 190 ms |
-| **Warm open**, 215 apps | About a quarter of a second |
+| Time to the flyout on screen | C++ version | C# version |
+|---|---|---|
+| **Cold open** | **About a fifth of a second** (164 to 231 ms over ten tries) | About 0.8 seconds |
+| **Warm open**, 8 apps | **29 ms** | 54 ms |
+| **Warm open**, 20 apps | **32 ms** | 69 ms |
+| **Warm open**, 142 apps | **51 ms** | 177 ms |
+| **Warm open**, 215 apps | **59 ms** | 228 ms |
+
+Each warm figure is the middle of six opens. The C++ times start when the click's own small program starts, so they include handing the click over to the running app; the C# times start at the hand over itself, which leaves its launcher's start (about 17 ms) out. The C# cold open is the figure its own page gives for this PC: its launcher writes to your real groups folder, so the script does not run it.
 
 ### Sitting in the background
 
-| | |
-|---|---|
-| CPU, nothing on screen | **No measurable CPU** |
-| Memory, two seconds after a flyout closes | **About 12 MB** in Task Manager |
-| Background services | **None.** No service and no scheduled task |
-| Added to your startup | **Nothing**, unless you switch that on yourself |
-| Open on hover, if you switch it on | **No CPU while the pointer is still or in other apps.** About 50 microseconds each time the pointer moves over the taskbar, the desktop or a File Explorer window, and nothing at all with it off. No extra program |
-| Network | One update check a day, and nothing else |
+| | C++ version | C# version |
+|---|---|---|
+| CPU, nothing on screen | **None**: 0 ms in a minute | 78 ms in a minute |
+| Memory it holds, after an 8 or 20 app group | **About 20 MB** | About 88 MB |
+| Memory it holds, after the 215 app group | **About 57 MB** | About 112 MB |
+| Task Manager's Memory column, two seconds after a flyout closes | **Under 1 MB** | Under 3 MB at first, about 20 MB a minute later |
+| Background services | **None.** No service and no scheduled task | None |
+| Added to your startup | **Nothing**, unless you switch that on yourself | Nothing |
+| Network | One update check a day, and nothing else | The same |
+
+"Memory it holds" is what Windows has given the app and not had back (private bytes), read three seconds after the flyout closes. Task Manager's Memory column shows only the part of that sitting in RAM at that moment, and both versions empty that two seconds after a flyout closes: the pages go back to Windows, so the column drops while the memory is still the app's. The C++ version keeps the parts it shares with Windows (its code and the system's fonts) in place, and since nothing in it runs while no flyout is open, the column stays under 1 MB until your next click. That click waits a few ms for its pages to come back: an open after the column has dropped takes 3 to 10 ms longer than the warm figures above.
+
+### Size
+
+| | C++ version | C# version |
+|---|---|---|
+| The setup program | **3.5 MB** | About 47 MB |
+| On disk once installed | **About 6 MB** | About 160 MB |
+| Files installed | **One program** and its menu icons | The program and about 240 runtime files |
 
 ### Optimization techniques
 
-This is how the app is kept quick and light. Nothing here is exotic: they are the standard techniques, applied where a measurement said they were needed rather than where they looked clever. Every saving below is a before and after, measured minutes apart on the same PC.
+The same rule as the C# version: the standard techniques, applied where a measurement said they were needed, and every saving below is a before and after on the same PC.
 
-- **A native launcher for every click.** A click on a group's button starts a tiny helper whose only job is to hand the click to the app already running. It used to be a .NET program, so every click started the .NET runtime first, and after a long gap that could take over a second. It is now a small native program that never loads .NET: the handover went from **about 90 ms to about 17**. If the app is not running, the same file starts it as before.
-- **Handing memory back as soon as nothing is on screen.** Two seconds after the last flyout closes, or straight after the main window closes, the app returns its working memory to Windows: **114 MB down to 12** after a flyout, **204 down to 19** after the main window. Nothing it has read is thrown away, which is why the next open costs about 8 ms more and not a second.
-- **A faster cold open.** The app records which of its own code runs at start up and has it compiled on several cores at once on the next start. The cold open went from **1,020 ms to 836**.
-- **Doing the expensive work before the click rather than during it.** Once your first flyout is on screen, a background thread works out what everything in your other groups launches: **the second group you open went from 1,378 ms to 479**. With "start with Windows" on, the first window is built in advance at sign-in, off the side of the screen, and **the first click of the day went from 426 ms to 232**.
-- **Event driven rather than polling.** Nothing ticks while no flyout is on screen. The timers that keep previews and running dots current only run while there is a flyout to keep current, which is why the background figure is a measured zero rather than a small number.
-- **Redrawing only what changed.** Dropping an app into a group, or changing a setting, redraws that one card rather than rebuilding the whole page, and the main window keeps the screens you have visited rather than building them again.
-- **UI virtualization.** The built in file browser builds only the rows you can see, about twenty of them out of nine hundred, and throws each one away as it scrolls off. Opening a folder of 943 files went from **846 to 977 ms down to 160**, and the tiles view of the same folder from **894 ms to 90**.
-- **Filtering in memory instead of rebuilding.** Both search boxes filter a list they already hold rather than tearing every tile down and building new ones for each letter you type. A keystroke in the installed apps search went from **1,249 ms to 30**, and one in the file browser's from **322 to 555 ms down to 92**.
-- **Caching what Windows is slow to answer.** Every app's icon is read out of the shell once and kept, about 160 KB each, which is why a warm open is so quick. The bitmaps are frozen, so the background thread and the drawing thread share one copy instead of taking one each.
-- **Decoding pictures at the size they are drawn**, and shrinking a picture once when you choose it rather than on every load. The photograph this was built for went from **1.3 MB and 189 ms a load to 158 KB and 25 ms**.
-- **Lazy work.** Artwork is only requested for what is on screen, plus one screen either side. Naming an app and finding its picture are both ladders of five steps, and an app answered by the first step never pays for the other four.
-- **Prioritising the queue.** There is one thread reading pictures and one queue, so the order they are asked for is the order tiles fill in: the group you clicked, then the groups on your taskbar, then the rest.
-- **Background threads that give way.** All of that runs at below normal priority, so it yields to whatever you are actually doing, and each one writes down what it did in the app's own log. Work you cannot see is the thing this product does not do.
-- **Coalescing repeated work.** Opening a large group used to queue **138 identical layout checks**; they now collapse into one, because running the check once and running it 138 times give the same answer.
-- **Bounded logs and bounded caches.** The app's own trace file is capped at 256 KB rather than growing forever, and every cache in it is limited by something your machine has a fixed number of.
-- **Memory leaks checked for and fixed.** The main window and a flyout were each opened and closed 24 times in a row, and the memory the app holds did not grow. Every leak found on the way has a check that fails if it ever comes back.
+- **No runtime at all.** The whole app is one 5.7 MB program in C++, with Windows' own C runtime underneath. There is nothing to start before your click is answered, which is most of why a cold open went from about 0.8 seconds to about a fifth of one.
+- **One small program for every click.** A pinned group starts the same program, which hands the click to the copy already running down a named pipe and exits, before it has loaded anything it does not need. If no copy is running, that same process becomes the app.
+- **Loading late.** The parts of Windows a click does not need are loaded only when something asks for them: the shell, COM and the drawing libraries after the click is handed over, the accessibility interface only when a screen reader asks, the network library only for the update check. Taking the drawing libraries off the click's own start made every warm open about 4 to 7 ms quicker.
+- **Drawing without the graphics card's driver.** Every window is drawn in software and copied to the screen, so the graphics driver, which costs about 100 MB the moment it loads, never loads at all. The first open of a 14 app group went from **120 MB to 15 MB** with the warm open no slower.
+- **Redrawing only what changed.** Each frame draws only the parts of the window whose pixels changed. A check mode draws every such frame whole as well and compares them, and it has never found a pixel out.
+- **Event driven rather than polling.** Nothing ticks while no flyout is on screen, which is why the background figure is a measured zero rather than a small number.
+- **Doing the slow first steps side by side.** On a cold open, the shell lookups for the clicked group's apps and the setting up of the drawing start the moment the groups are read, on threads of their own, while the rest of the start goes on, and the lookups run four at a time rather than one after another. That took a cold open from about 270 ms to about 190.
+- **Doing the expensive work before the click rather than during it.** Once your first flyout is on screen, a background thread works out what everything in your other groups launches (197 apps in about one second here), so no other group pays for it on its first open.
+- **Caching what Windows is slow to answer.** Every app's icon is read out of the shell once and kept, which is why a warm open is so quick, and why memory grows with the number of apps you have opened rather than with time.
+- **UI virtualization.** The built in file browser builds only the rows you can see and a page either side, as the C# version's does.
+- **Memory leaks checked for.** A flyout was opened and closed 5,000 times in a row: the memory grew by 0.2 MB over the last 2,500 opens, and the window, drawing and system handles it held were the same or fewer at the end than at the start.
 
 ### What it does cost
 
-- **A flyout left open on screen costs about 1% of one core** for as long as you leave it up, because it is a live thing refreshing what it shows.
-- **Handing memory back has one real cost.** On a machine short of RAM, Windows reuses that memory first, so a warm open after a long gap can be slower sooner than it would otherwise be. With RAM to spare it makes no difference.
-- **A cold open after a long gap, on a machine short of memory, can take one to two seconds**, and almost all of that is Windows reading the program off the disk. Turning on "start with Windows" moves that cost to sign-in.
-- **Open on hover listens only while the pointer moves over the taskbar, the desktop or a File Explorer window**, which comes to about 0.5% of one core while the pointer keeps moving along the taskbar and nothing once it stops. It uses a standard Windows accessibility event, the kind screen readers use, with no mouse hook and nothing added to Explorer. Turning it on also turns on "start with Windows", and says so. Switched off, it listens to nothing.
-- **A very large group costs more**, as the table shows: 215 apps takes about a quarter of a second where a dozen takes well under a tenth.
-- **None of these numbers is flattered by the build.** They were taken on a debug build, the slower of the two, and a release build measured against the same work was not faster.
-
-<details>
-<summary>What was measured and then deliberately not built</summary>
-
-- **The switch everybody reaches for first.** ReadyToRun is meant to make a .NET app start faster. Measured here it made no difference, 527 ms against 525, so it is not used.
-- **A different garbage collector.** Left alone on purpose. The default is the one Microsoft documents for desktop apps, and the server one would trade memory for throughput this app does not need.
-- **Throwing away cached pictures.** An entry was measured at 2 to 9 KB, so an eviction policy would have added a moving part to the path everything draws through and saved almost nothing.
-- **Drawing only the tiles a flyout can show.** Built, measured, and it ships switched off: it saved 9 ms on one deliberately enormous group and nothing at all on the 226 app one it was aimed at.
-- **A setting for the memory hand back.** It is simply on. It costs about 8 ms on the next open and saves around 100 MB, so there was nothing for a switch to choose between.
-
-</details>
+- **A very large group costs more**, as the table shows: 215 apps takes 59 ms where a dozen takes about 30.
+- **An open after a pause is a few ms slower**, because two seconds after a flyout closes its pages are handed back to Windows, which is what keeps Task Manager's figure under 1 MB: 3 to 10 ms, depending on the size of the group.
+- **Memory grows with what you have opened.** Each app's icon is kept once it has been read, so opening every app of a 215 app group takes the app from about 20 MB to about 57 MB, and it stays there rather than being read again.
+- **A cold open after a long gap, on a machine short of memory, is slower**, because Windows has to read the program off the disk first. At 6 MB there is much less to read than there was. Turning on "start with Windows" moves that cost to sign-in.
+- **None of these numbers is flattered by the build.** They were taken on a release build of the same code the setup program installs, which differs only in the names it gives its folder and taskbar identity.
 
 ---
 
-## Installing
+## Getting it
 
-1. Download `MaGrouperSetup.exe` from the [latest release](../../releases/latest).
-2. Run it. Choose **More info**, then **Run anyway**, see the note below.
-3. The wizard asks whether to install for everybody or just you, and where. The defaults are for all users and `C:\Program Files\MaGrouper`.
+MaGrouper is a **one-time purchase**: pay once and it is yours, with every future update, on every computer you use. There is no subscription, no account and no licence key to type.
 
-> [!NOTE]
-> **Windows will warn you about this file.** It says "Windows protected your PC" because the installer is not signed by a paid code signing certificate yet. That is a statement about the certificate and not about the file: an unsigned installer and a dangerous one look identical to Windows, so it warns about both. Nothing else is bundled with it, nothing runs in the background unless you turn that on yourself, and you do not have to take that on trust. Check it yourself with the two commands below.
-
-<details>
-<summary>Check the file is the one published here</summary>
-
-Every release page prints the **SHA256** of the installer next to the file, and Windows will tell you the SHA256 of the copy you downloaded. If the two match, character for character, the file on your disk is byte for byte the file published here and nothing has touched it in between.
-
-In PowerShell, in the folder you downloaded it to:
-
-```powershell
-Get-FileHash .\MaGrouperSetup.exe -Algorithm SHA256
-```
-
-Compare that against the hash shown beside `MaGrouperSetup.exe` on the [latest release](../../releases/latest). **If they do not match, delete the file**, and please open an issue saying where you got it from.
-
-You can also see what any machine makes of it by uploading the installer to [VirusTotal](https://www.virustotal.com/), which runs it past around seventy scanners at once. A handful of them flag unsigned installers on principle, so expect that rather than a clean sweep.
-
-</details>
+1. **[Buy it on anythinguseful.dev](https://anythinguseful.dev/magrouper).** Checkout is handled by Paddle, who take card, PayPal, Apple Pay and Google Pay and add the right sales tax for your country.
+2. **Download your installer** from the page you land on after paying. The same link is in your receipt email and works for good: use it again for a new PC or a reinstall.
+3. **Run it.** The wizard asks whether to install for everybody or just you, and where. The defaults are for all users and `C:\Program Files\MaGrouper`.
 
 > [!TIP]
-> **Updates come from this page.** An installed copy looks here once a day and tells you when there is a newer one. It downloads and installs nothing until you press the button on its own settings screen.
+> **Already using the free C# version?** The installer asks whether to put MaGrouper beside it or replace it. Replace it and your groups, your pinned buttons and your settings all carry across.
+
+> [!NOTE]
+> **Lost the link?** Type your email at **[Download again](https://anythinguseful.dev/magrouper/redownload)** and it is sent to you. Receipts and invoices are in Paddle's customer portal, linked from the same page.
+
+> [!NOTE]
+> **Windows may warn you about this file.** It says "Windows protected your PC" because the installer is not yet signed by a paid code signing certificate. Choose **More info**, then **Run anyway**. Every buyer gets byte for byte the same file, and its SHA256 is printed on the download page: in PowerShell, `Get-FileHash .\MaGrouperSetup-*.exe -Algorithm SHA256` should match it character for character.
+
+> [!TIP]
+> **Updates are included, for life.** An installed copy checks once a day and tells you when there is a newer one. It downloads and installs nothing until you press the button on its own settings screen.
 
 ### What it needs
 
 - Windows 11, 64 bit. It runs on Windows 10 but the taskbar behaves differently and is untested.
-- Nothing else. .NET is inside the installer.
-- About 160 MB on disk once installed.
+- Nothing else. There is no runtime to install, and none inside the installer either.
+- About 6 MB on disk once installed.
 
 ---
 
-## Worth knowing before you download
+## Worth knowing before you buy
 
 Three of these are limits of the Windows 11 taskbar rather than of this app. They were each measured rather than assumed, and the app tells you about them in the moment instead of leaving you to work it out.
 
@@ -550,7 +551,7 @@ Nothing is injected into Explorer, no shell extension is registered, and the tas
 <details>
 <summary>What it does with your data, which is nothing</summary>
 
-No account, no telemetry, no analytics. Your groups live in one readable file under your own app data folder, and the only thing it ever sends is a request to this page asking what the newest version is. It does not start with Windows unless you switch that on, or switch on open on hover, which turns it on for you and says so.
+No account, no telemetry, no analytics. Your groups live in one readable file under your own app data folder. The only thing it ever sends is a once a day request to anythinguseful.dev asking what the newest version is, and, only when you press Update, your order's code so the update can be downloaded. It does not start with Windows unless you switch that on, or switch on open on hover, which turns it on for you and says so.
 
 </details>
 
@@ -563,20 +564,65 @@ The uninstaller offers to remove your groups, the icons it composed and the shor
 
 ---
 
+## Questions
+
+<details>
+<summary>How much is it, and what do I get?</summary>
+
+$3, once. Every future update, on every computer you use, with no subscription, no account and no licence key. Full refund within 14 days, no questions asked.
+
+</details>
+
+<details>
+<summary>Is there still a free version?</summary>
+
+Yes. MaGrouper Classic 2.1.9, the original C# version, stays free on the [releases page](../../releases/latest). It won't be updated again; new features such as groups on the desktop are in 2.2.
+
+</details>
+
+<details>
+<summary>How is it different from Taskbar Groups and other taskbar group apps?</summary>
+
+There is a fair side by side comparison, including the free and open source options, at [anythinguseful.dev/magrouper/taskbar-groups-alternative](https://anythinguseful.dev/magrouper/taskbar-groups-alternative/).
+
+</details>
+
+<details>
+<summary>Windows says "Windows protected your PC"</summary>
+
+The installer is not signed with a paid certificate yet. Choose **More info**, then **Run anyway**. Every buyer gets the same file.
+
+</details>
+
+<details>
+<summary>I lost my download, or I have a new PC</summary>
+
+Type the email you bought with at [Download again](https://anythinguseful.dev/magrouper/redownload) and your link is emailed to you. It never expires.
+
+</details>
+
+More answers are in the [FAQ](https://anythinguseful.dev/magrouper/faq/).
+
+---
+
 ## Licence and copyright
 
-Copyright (c) 2026 MaGrouper. All rights reserved.
+Copyright (c) 2026 Noah P Davidson. All rights reserved.
 
-**MaGrouper is free to use and is not open source.** Install it on as many machines as you own or use, at home or at work, for nothing. What you may not do is sell it, repackage it, rebrand it, or publish it anywhere else. The full terms are in **[LICENSE.txt](LICENSE.txt)**.
+**MaGrouper is paid software and is not open source.** One purchase covers one person on as many computers as they own or use, at home or at work. What you may not do is share your download link, sell it, repackage it, rebrand it, or publish it anywhere else. The full licence is shown by the installer and summed up in the [terms](https://anythinguseful.dev/magrouper/terms/), beside the [refund policy](https://anythinguseful.dev/magrouper/refunds/) and [privacy policy](https://anythinguseful.dev/magrouper/privacy/). [LICENSE.txt](LICENSE.txt) in this repository is the licence of the free Classic version.
 
-**It is published in exactly two places: this page and the Microsoft Store.** If you find it on a download portal, a mirror, a torrent or any other app store, that copy did not come from here, nobody has checked what is in it, and I would be glad to hear about it on the [issues page](../../issues).
+**It is sold in one place: [anythinguseful.dev](https://anythinguseful.dev/magrouper).** If you find it on a download portal, a mirror, a torrent or any other app store, that copy did not come from here, nobody has checked what is in it, and I would be glad to hear about it on the [issues page](../../issues).
 
 > [!NOTE]
-> **The "Source code" archives on each release are not the source code of the app.** GitHub attaches a zip and a tar.gz to every release automatically, and they hold a copy of *this repository*, which is this page and its pictures. The app is not open source and its code has never been in here.
+> **The free C# version, MaGrouper Classic 2.1.9, stays free** on the [releases page](../../releases/latest). It has everything up to 2.1.9, and it will not be updated again. Groups on the desktop, the speed and memory figures above, and every new feature from here on are in the paid version. The paid version's installer can replace the classic one and keep all your groups.
+
+> [!NOTE]
+> **The "Source code" archives on a release are not the source code of the app.** GitHub attaches a zip and a tar.gz to every release automatically, and they hold a copy of *this repository*, which is this page and its pictures. The app is not open source and its code has never been in here.
 
 ---
 
 <p align="center">
-  <sub>Built for Windows 11. Report a problem on the <a href="../../issues">issues page</a>, or read
-  what changed in the <a href="../../releases">release notes</a>.</sub>
+  <sub>Built for Windows 11. <a href="https://anythinguseful.dev/magrouper">Buy it</a>, report a problem on the
+  <a href="../../issues">issues page</a>, or read what changed in the
+  <a href="https://anythinguseful.dev/magrouper/changelog">release notes</a>.</sub>
 </p>
