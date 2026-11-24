@@ -163,7 +163,7 @@ Open a group, press the pen, and the flyout itself becomes editable in place.
   <sub>The list view, in two columns. The dimmed Teams tile is an app that is no longer installed.</sub>
 </p>
 
-Every one of those is a global setting with a per group override, so your groups can all match, or each one can be its own thing. Where a flyout opens is yours too: centred on its button, lined up on its left hand app, or lined up on its right hand app.
+Every one of those is a global setting with a per group override, so your groups can all match, or each one can be its own thing. Where a flyout opens is yours too: centered on its button, lined up on its left hand app, or lined up on its right hand app.
 
 ---
 
@@ -274,13 +274,13 @@ Pick several with Ctrl or Shift and they travel together, and one drag is one pr
 Every app, file and folder in a group has its own start options, so one tile can open exactly the thing you want rather than the app's front door.
 
 <p align="center">
-  <img src="media/start-options.png" width="560" alt="The Start options card for Google Chrome: Start with set to a profile, Start in its program folder, Run as administrator, the window set to Maximised, and a box showing exactly what a click starts">
+  <img src="media/start-options.png" width="560" alt="The Start options card for Google Chrome: Start with set to a profile, Start in its program folder, Run as administrator, the window set to Maximized, and a box showing exactly what a click starts">
 </p>
 
 - **Start with**: the arguments the app is started with, such as a particular profile, playlist or project.
 - **Start in**: the folder it starts in.
 - **Run as administrator**, and Windows asks you once, as it should.
-- **Window size**: normal, minimised or maximised.
+- **Window size**: normal, minimized or maximized.
 
 **The same app can go into a group more than once**, each copy with its own start options. Two Chrome tiles, one for work and one for home, is one group.
 
@@ -346,7 +346,7 @@ Rest on a preview and the window itself comes forward, full size, in its own pla
 
 ### Draw the icon yourself
 
-A real editor: layers of text, shapes, app icons and pictures, dragged around, resized by their corners, turned by a handle, in any colour, at any weight. Sixty steps of undo, and the 16, 24, 32 and 48 pixel versions drawn underneath as you work.
+A real editor: layers of text, shapes, app icons and pictures, dragged around, resized by their corners, turned by a handle, in any color, at any weight. Sixty steps of undo, and the 16, 24, 32 and 48 pixel versions drawn underneath as you work.
 
 </td>
 <td width="54%"><img src="media/editor-designer.png" width="100%" alt="The icon designer"></td>
@@ -380,7 +380,7 @@ Uninstall an app that is in a group and its tile dims and takes a small mark rat
 
 ### Light, dark, and your call on everything
 
-**There is a full light theme and a full dark one**, and it will follow Windows if you would rather not choose. Every screenshot on this page is the dark theme; the light one is the same app in daylight. Then: how many rows a flyout has and how many lines a name gets, whether it opens centred on its button or lined up on an app, what the other previews do when you close one, whether it starts with Windows. Every setting shows you a picture of what it does rather than describing it.
+**There is a full light theme and a full dark one**, and it will follow Windows if you would rather not choose. Every screenshot on this page is the dark theme; the light one is the same app in daylight. Then: how many rows a flyout has and how many lines a name gets, whether it opens centered on its button or lined up on an app, what the other previews do when you close one, whether it starts with Windows. Every setting shows you a picture of what it does rather than describing it.
 
 </td>
 </tr>
@@ -403,7 +403,7 @@ Everything on your taskbar and everything installed, searchable, plus a folders 
 Pick a template, drop in a picture, or open the designer and draw one.
 
 <p align="center">
-  <img src="media/editor-group-tools.png" width="900" alt="A group's own page: the apps in it as chips, the six icon styles with one chosen, the tile colour, and the icon at its real size on a taskbar">
+  <img src="media/editor-group-tools.png" width="900" alt="A group's own page: the apps in it as chips, the six icon styles with one chosen, the tile color, and the icon at its real size on a taskbar">
 </p>
 
 ### 3. Pin it
@@ -421,7 +421,7 @@ Save, and a small window holds your group's icon. **Drag it out of that window o
 
 ## Performance and optimization
 
-It is built to sit out of your way and answer the moment you click. This is MaGrouper rewritten in native C++: the same look and the same behaviour as the C# version, with no runtime underneath it, so it starts faster, opens faster and holds a fraction of the memory.
+It is built to sit out of your way and answer the moment you click. This is MaGrouper rewritten in native C++: the same look and the same behavior as the C# version, with no runtime underneath it, so it starts faster, opens faster and holds a fraction of the memory.
 
 > [!NOTE]
 > **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling. That is the same PC the C# version's figures came from, and both versions were measured by one script on the same day, on the same four groups of 8, 20, 142 and 215 apps made from that PC's Start menu. Every time is the app's own log line, written the moment the flyout is on screen. A newer PC will be quicker and one that is short of memory will be slower, but the shape is the same everywhere.
@@ -493,7 +493,7 @@ The same rule as the C# version: the standard techniques, applied where a measur
 
 ## Getting it
 
-MaGrouper is a **one-time purchase**: pay once and it is yours, with every future update, on every computer you use. There is no subscription, no account and no licence key to type.
+MaGrouper is a **one-time purchase**: pay once and it is yours, with every future update, on every computer you use. There is no subscription, no account and no license key to type.
 
 1. **[Buy it on anythinguseful.dev](https://anythinguseful.dev/magrouper).** Checkout is handled by Paddle, who take card, PayPal, Apple Pay and Google Pay and add the right sales tax for your country.
 2. **Download your installer** from the page you land on after paying. The same link is in your receipt email and works for good: use it again for a new PC or a reinstall.
@@ -569,7 +569,7 @@ The uninstaller offers to remove your groups, the icons it composed and the shor
 <details>
 <summary>How much is it, and what do I get?</summary>
 
-$3, once. Every future update, on every computer you use, with no subscription, no account and no licence key. Full refund within 14 days, no questions asked.
+$3, once. Every future update, on every computer you use, with no subscription, no account and no license key. Full refund within 14 days, no questions asked.
 
 </details>
 
@@ -605,11 +605,11 @@ More answers are in the [FAQ](https://anythinguseful.dev/magrouper/faq/).
 
 ---
 
-## Licence and copyright
+## License and copyright
 
 Copyright (c) 2026 Noah P Davidson. All rights reserved.
 
-**MaGrouper is paid software and is not open source.** One purchase covers one person on as many computers as they own or use, at home or at work. What you may not do is share your download link, sell it, repackage it, rebrand it, or publish it anywhere else. The full licence is shown by the installer and summed up in the [terms](https://anythinguseful.dev/magrouper/terms/), beside the [refund policy](https://anythinguseful.dev/magrouper/refunds/) and [privacy policy](https://anythinguseful.dev/magrouper/privacy/). [LICENSE.txt](LICENSE.txt) in this repository is the licence of the free Classic version.
+**MaGrouper is paid software and is not open source.** One purchase covers one person on as many computers as they own or use, at home or at work. What you may not do is share your download link, sell it, repackage it, rebrand it, or publish it anywhere else. The full license is shown by the installer and summed up in the [terms](https://anythinguseful.dev/magrouper/terms/), beside the [refund policy](https://anythinguseful.dev/magrouper/refunds/) and [privacy policy](https://anythinguseful.dev/magrouper/privacy/). [LICENSE.txt](LICENSE.txt) in this repository is the license of the free Classic version.
 
 **It is sold in one place: [anythinguseful.dev](https://anythinguseful.dev/magrouper).** If you find it on a download portal, a mirror, a torrent or any other app store, that copy did not come from here, nobody has checked what is in it, and I would be glad to hear about it on the [issues page](../../issues).
 
