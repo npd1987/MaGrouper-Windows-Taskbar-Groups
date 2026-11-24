@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  One payment, yours for life, updates included. One file, about 3.5 MB.<br>
+  One payment, yours for life, updates included. One file, about 3.9 MB.<br>
   No subscription, no account, no telemetry.
 </p>
 
@@ -461,7 +461,7 @@ Each warm figure is the middle of six opens. The C++ times start when the click'
 
 | | C++ version | C# version |
 |---|---|---|
-| The setup program | **3.5 MB** | About 47 MB |
+| The setup program | **3.9 MB** | About 47 MB |
 | On disk once installed | **About 6 MB** | About 160 MB |
 | Files installed | **One program** and its menu icons | The program and about 240 runtime files |
 
