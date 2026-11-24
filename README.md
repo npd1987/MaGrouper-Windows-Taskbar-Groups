@@ -434,7 +434,7 @@ Save, and a small window holds your group's icon. **Drag it out of that window o
 It is built to sit out of your way and answer the moment you click. This is MaGrouper rewritten in native C++: the same look and the same behavior as the C# version, with no runtime underneath it, so it starts faster, opens faster and holds a fraction of the memory.
 
 > [!NOTE]
-> **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling. That is the same PC the C# version's figures came from, and both versions were measured by one script on the same day, on the same four groups of 8, 20, 142 and 215 apps made from that PC's Start menu. Every time is the app's own log line, written the moment the flyout is on screen. A newer PC will be quicker and one that is short of memory will be slower, but the shape is the same everywhere.
+> **What these numbers were measured on**: an ordinary mid range laptop, an Intel Core i7-1165G7 with 16 GB of memory, on Windows 11 at 100% scaling. That is the same PC the C# version's figures came from, and both versions were measured by one script on the same day, on the same four groups of 8, 20, 142 and 215 apps made from that PC's Start menu. Every time is the app's own log line, written the moment the flyout is on screen. A newer PC will be quicker and one that is short of memory will be slower, but the shape is the same everywhere. These are one PC's results, not a promise: your times will depend on your hardware, but because the app does so little per click, a group should open in well under a tenth of a second on most PCs.
 
 There are two kinds of open, and they are the only two times you will ever see:
 
