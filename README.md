@@ -26,7 +26,7 @@
 <td align="center">.NET / WPF &middot; about 48 MB download<br>Free, no longer updated</td>
 </tr>
 <tr>
-<td align="center"></td>
+<td align="center"><a href="https://anythinguseful.dev/magrouper"><img alt="Copies of 2.2.0 sold" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fanythinguseful.dev%2Fmagrouper%2Fapi%2Fsold.php"></a></td>
 <td align="center"><a href="../../releases"><img alt="Classic downloads" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnpd1987%2FMaGrouper-Windows-Taskbar-Groups%2Fbadges%2Fdownloads.json"></a></td>
 </tr>
 <tr>
